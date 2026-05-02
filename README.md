@@ -50,8 +50,8 @@ Desenvolvemos uma aplicação JavaFX que centraliza a gestão acadêmica para pr
 
 | Id | rank | Prioridade | User Story | Estimativa | Sprint |
 | -- | ---- | ---------- | ---------- | ---------- | ------ |
-| | 1   | Alta | Como professor, quero que a tabela do semestre seja montada automaticamente, para não precisar gastar horas organizando manualmente as aulas. | 3   | 1   |
-| | 2   | Alta | Como professor, quero separar os planejamentos por curso e por semestre, para não confundir turmas diferentes. | 2   | 1   |
+| [Geração automática do cronograma de um professor](docs/sprint/Sprint-1/US1.md) | 1   | Alta | Como professor, quero que a tabela do semestre seja montada automaticamente, para não precisar gastar horas organizando manualmente as aulas. | 3   | 1   |
+| [Seleção de semestre e curso](docs/sprint/Sprint-1/US2.md) | 2   | Alta | Como professor, quero separar os planejamentos por curso e por semestre, para não confundir turmas diferentes. | 2   | 1   |
 
 ### Definition of Ready (DoR)
 
