@@ -6,7 +6,7 @@ Faculdade de Tecnologia de São José dos Campos - Professor Jessen Vidal
 
 <p align="center">      <img src="docs/img/logo_datasquad.png" alt="logo do Data Squad" width="200">      <h2 align="center"> Data Squad </h2></p>
 
-<p align="center">  | <a href ="#desafio"> Desafio</a>  |  <a href ="#solucao"> Solução</a>  |     <a href ="#backlog"> Backlog do Produto</a>  |  <a href ="#dor">DoR</a>  |  <a href ="#dod">DoD</a>  |  <a href ="#sprint"> Cronograma de Sprints</a>  |  <a href ="#tecnologias">Tecnologias</a> |  <a href ="#link">Link para Documentação</a>  |   <a href ="#equipe"> Equipe</a> |</p>
+<p align="center">  | <a href ="#desafio"> Desafio</a>  |  <a href ="#solucao"> Solução</a>  |     <a href ="#backlog"> Backlog do Produto</a>  |  <a href ="#sprint"> Cronograma de Sprints</a>  |  <a href ="#tecnologias">Tecnologias</a> |  <a href ="#link">Link para Documentação</a>  |   <a href ="#equipe"> Equipe</a> |</p>
 
 > Status do Projeto: Em produção 🛠
 
@@ -145,7 +145,6 @@ Sprint | Previsão | Status|
 
 * [Manual de Instalação](docs/manual/instalação.md)
 * [Manual do Usuário](docs/manual/usuário.md)
-* [Relatório Sprint 1](docs/sprint/relatorio_sprint1.md)
 
 * * *
 
