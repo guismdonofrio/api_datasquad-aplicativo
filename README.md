@@ -27,7 +27,7 @@ Desenvolvemos uma aplicação JavaFX que centraliza a gestão acadêmica para pr
 | 1   | Alta | Como professor, quero que a tabela do semestre seja montada automaticamente, para não precisar gastar horas organizando manualmente as aulas. | 3   | 1   |
 | 2   | Alta | Como professor, quero separar os planejamentos por curso e por semestre, para não confundir turmas diferentes. | 2   | 1   |
 | 3   | Media | Como professor, desejo que o sistema impeça o agendamento de avaliações em períodos restritos, para garantir que o planejamento ocorra sem conflitos. |   5  | 2   |
-| 4   | Media | Como professor, quero que o coordenador preencha as datas de feriados, para que não corrompam o planejamento. |  5   | 2   |
+| 4   | Media | Como professor, quero que a secretaria preencha as datas de feriados, para que não corrompam o planejamento. |  5   | 2   |
 | 5   | Media | Como professor, quero informar os temas que preciso ensinar, para que a tabela seja montada usando esses assuntos. |   3  | 2   |
 | 6   | Media | Como professor, quero indicar se um tema precisa ser ensinado antes de outro, para evitar que os alunos vejam um assunto sem entender o anterior. |  5   | 2   |
 | 7   | Media | Como professor, quero indicar quais temas são opcionais, para que eles apareçam apenas se houver tempo no semestre. |   3  | 2   |
@@ -43,6 +43,37 @@ Desenvolvemos uma aplicação JavaFX que centraliza a gestão acadêmica para pr
 <details>
   <summary><b>Sprint 1</b></summary>
 
+### **Sprint 1: Execução e Planejamento**
+* **Capacidade Estimada da Equipe:** 10 Story Points
+* **Meta da Sprint:** User Story de rank 1 (total de 3 Story Points).
+* **Metas Extras:** User Story de rank 2.
+
+| Id | rank | Prioridade | User Story | Estimativa | Sprint |
+| -- | ---- | ---------- | ---------- | ---------- | ------ |
+| | 1   | Alta | Como professor, quero que a tabela do semestre seja montada automaticamente, para não precisar gastar horas organizando manualmente as aulas. | 3   | 1   |
+| | 2   | Alta | Como professor, quero separar os planejamentos por curso e por semestre, para não confundir turmas diferentes. | 2   | 1   |
+
+### Definition of Ready (DoR)
+
+Para uma User Sory estar apta ao início de um Sprint, os critérios a seguir devem ser concluídos:
+
+- Itens mandatórios já identificados.
+- Tem uma clara separação de **instruções, descrição e exemplos**.
+- **Critérios de aceitação e regras de negócio** definidos.
+- **Prioridade** já definida.
+- O **esforço** já definido pela equipe.
+
+### Definition of Done (DoD)
+
+Para uma User Story ser considerada **completa**, os seguintes critérios devem ser concluídos:
+
+- O código está escrito, testado e limpo (seguindo os padrões da equipe).
+- A funcionalidade deve estar integrada à branch **develop** do repositório [BD_2S_backend](https://github.com/rubensvnc/BD_2S_backend).
+- Os **critérios de aceitação** de uma **User Story** foram completos.
+- The interface complies with **usability principles**, providing clear and consistent navigation for the end user.
+- A interface leva em consideração a facilidade de uso ao usuário, sempre exigindo o mínimo de interações possível.
+- A funcionalidade foi **testada** e **aprovada** pelo **Product Owner (PO)**.
+
 </details>
 
 <details>
@@ -56,7 +87,7 @@ Desenvolvemos uma aplicação JavaFX que centraliza a gestão acadêmica para pr
 | Id | rank | Prioridade | User Story | Estimativa | Sprint |
 | -- | ---- | ---------- | ---------- | ---------- | ------ |
 | [Restrições de Agendamento para Organização do Sistema](docs/sprint/Sprint-2/US3.md) | 3    | Media      | Como professor, desejo que o sistema impeça o agendamento de avaliações em períodos restritos, para garantir que o planejamento ocorra sem conflitos. | 5          | 2      |
-| [Restrições de Agendamento Atribuídas a Um Coordenador](docs/sprint/Sprint-2/US4.md) | 4    | Media      | Como professor, quero que o coordenador preencha as datas de feriados, para que não corrompam o planejamento.                                         | 5          | 2      |
+| [Restrições de Agendamento Atribuídas a Um Coordenador](docs/sprint/Sprint-2/US4.md) | 4    | Media      | Como professor, quero que a secretaria preencha as datas de feriados, para que não corrompam o planejamento.                                         | 5          | 2      |
 | [Adição de Temas por um Professor](docs/sprint/Sprint-2/US5.md)                      | 5    | Media      | Como professor, quero informar os temas que preciso ensinar, para que a tabela seja montada usando esses assuntos.                                    | 3          | 2      |
 | [Specificações de um Tema_1](docs/sprint/Sprint-2/US6.md)                            | 6    | Media      | Como professor, quero indicar se um tema precisa ser ensinado antes de outro, para evitar que os alunos vejam um assunto sem entender o anterior.     | 5          | 2      |
 | [Specificações de um Tema_2](docs/sprint/Sprint-2/US7.md)                            | 7    | Media      | Como professor, quero indicar quais temas são opcionais, para que eles apareçam apenas se houver tempo no semestre.                                   | 3          | 2      |
@@ -99,14 +130,14 @@ Para uma User Story ser considerada **completa**, os seguintes critérios devem 
 Sprint | Previsão | Status|
 |------|--------|------|
 |Sprint 01 | 16/03/2026 | concluído |
-|Sprint 02| 13/04/2026| a fazer |
+|Sprint 02| 13/04/2026| Em andamento |
 |Sprint 03| 11/05/2026 | a fazer
 
 * * *
 
 ## Tecnologias <a id="tecnologias"></a>
 
-<h4 align="center">       <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"></a>       <a href="https://openjfx.io/"><img src="https://img.shields.io/badge/JavaFX-0E4C92?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://github.com/palexdev/MaterialFX"><img src="https://img.shields.io/badge/MaterialFX-4CAF50?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://github.com/palexdev/MaterialFX"><img src="https://img.shields.io/badge/MaterialFX_Atlanta-2196F3?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://www.jetbrains.com/idea/"><img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"></a>       <a href="https://gluonhq.com/products/scene-builder/"><img src="https://img.shields.io/badge/Scene_Builder-FF6F00?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"></a>       <a href="https://github.com/about"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a> </h4>
+<h4 align="center">       <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"></a>       <a href="https://openjfx.io/"><img src="https://img.shields.io/badge/JavaFX-0E4C92?style=for-the-badge&logo=java&logoColor=white"></a>  <a href="https://www.jetbrains.com/idea/"><img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"></a>       <a href="https://gluonhq.com/products/scene-builder/"><img src="https://img.shields.io/badge/Scene_Builder-FF6F00?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"></a>       <a href="https://github.com/about"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a> </h4>
 
 * * *
 
