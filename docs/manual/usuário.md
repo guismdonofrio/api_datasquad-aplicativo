@@ -37,12 +37,11 @@ O sistema possui três perfis de usuário, cada um com responsabilidades especí
 ### 2.1 Primeiro Acesso
 
 1. Acessar o banco de dados e inserir manualmente um administrador, conforme imagem abaixo.
-   [IMAGEM AQUI]
+<p align="center">      <img src="img_manual_usuario/im1.png" width="500">   </p>
 
 2. Executar o arquivo .jar gerado no passo "Pré-requisitos"
 
-3. Realizar o login com os dados do ADM criado no passo 1, conforme imagem abaixo.
-   [IMAGEM AQUI]
+3. Realizar o login com os dados do ADM criado no passo 1.
 
 ### 2.2 Cadastrar Coordenador
 
@@ -57,7 +56,7 @@ O sistema possui três perfis de usuário, cada um com responsabilidades especí
 Se necessário, inserir dados do semestre, sprints e datas restritas, conforme as imagens abaixo:
 
 [IMAGEM AQUI]
-[IMAGEM AQUI]
+<p align="center">      <img src="img_manual_usuario/im2.png" alt="logo do Data Squad" width="500">      <h6 align="center"> Data restrita </h6></p>
 [IMAGEM AQUI]
 
 ### 2.4 Corrigir Cadastros
@@ -132,28 +131,27 @@ Em caso de cadastro incorreto:
 ### 4.2 Cadastrar Temas
 
 1. Acessar o botão para inserir os temas de uma disciplina, conforme imagem abaixo
-   [IMAGEM AQUI]
+   <p align="center">      <img src="img_manual_usuario/im3.png" width="500">   </p>
 
-2. Preencher as informações do tema, conforme imagem abaixo
+2. Preencher as informações do tema
    [IMAGEM AQUI]
 
    **Observação:** Para preencher as dependências, consulte a seção 4.5 deste manual.
 
-3. Finalizado o preenchimento, pressione o botão "Salvar", conforme imagem abaixo
-   [IMAGEM AQUI]
+3. Finalizado o preenchimento, pressione o botão "Salvar"
+   <p align="center">      <img src="img_manual_usuario/im4.png" width="500">   </p>
 
 ### 4.3 Visualizar Temas Cadastrados
 
-1. Pressione o combobox "Selecione o curso" e escolha o curso desejado, conforme imagem abaixo
-   [IMAGEM AQUI]
+1. Pressione o combobox "Selecione o curso" e escolha o curso desejado
 
 2. Selecione o combobox "Selecione o semestre" e escolha o semestre correspondente, conforme imagem abaixo
-   [IMAGEM AQUI]
+<p align="center">      <img src="img_manual_usuario/im5.png" width="500">   </p>
 
 ### 4.4 Gerar Cronograma
 
 1. Pressione o botão "Gerar cronograma", conforme imagem abaixo
-   [IMAGEM AQUI]
+<p align="center">      <img src="img_manual_usuario/im6.png" width="500">   </p>
 
 O sistema selecionará todos os temas criados para a disciplina e preencherá os dias letivos do semestre, conforme imagem abaixo.
 
@@ -164,10 +162,9 @@ O sistema selecionará todos os temas criados para a disciplina e preencherá os
 Se um tema depende de outro para ser lecionado:
 
 1. Selecione o combobox "Selecione um tema" e pressione o botão "Adicionar", conforme imagem abaixo
-   [IMAGEM AQUI]
 
 2. Finalizadas as inserções de dependências, pressione o botão "Salvar", conforme imagem abaixo
-   [IMAGEM AQUI]
+<p align="center">      <img src="img_manual_usuario/im4.png" width="500">   </p>
 
 O sistema entenderá que, para lecionar o tema A, é necessário ter inserido as datas de lecionamento dos temas B, C e D (selecionados ao clicar no botão "Adicionar").
 
