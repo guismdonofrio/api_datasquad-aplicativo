@@ -6,7 +6,7 @@ Faculdade de Tecnologia de São José dos Campos - Professor Jessen Vidal
 
 <p align="center">      <img src="docs/img/logo_datasquad.png" alt="logo do Data Squad" width="200">      <h2 align="center"> Data Squad </h2></p>
 
-<p align="center">  | <a href ="#desafio"> Desafio</a>  |  <a href ="#solucao"> Solução</a>  |     <a href ="#backlog"> Backlog do Produto</a>  |  <a href ="#dor">DoR</a>  |  <a href ="#dod">DoD</a>  |  <a href ="#sprint"> Cronograma de Sprints</a>  |  <a href ="#tecnologias">Tecnologias</a> |  <a href ="#link">Link para Documentação</a>  |   <a href ="#equipe"> Equipe</a> |</p>
+<p align="center">  | <a href ="#desafio"> Desafio</a>  |  <a href ="#solucao"> Solução</a>  |     <a href ="#backlog"> Backlog do Produto</a>|     <a href ="#sprintbacklog"> Sprint Backlog </a>  |  <a href ="#sprint"> Cronograma de Sprints</a>  |  <a href ="#tecnologias">Tecnologias</a> |  <a href ="#link">Link para Documentação</a>  |   <a href ="#equipe"> Equipe</a> |</p>
 
 > Status do Projeto: Em produção 🛠
 
@@ -39,9 +39,40 @@ Desenvolvemos uma aplicação JavaFX que centraliza a gestão acadêmica para pr
 | 13  | Baixa | Como professor, quero poder guardar planejamentos antigos, para usar como base em semestres futuros. |     | 3   |
 
 * * *
-## Sprint Backlog 📅
+## Sprint Backlog 📅 <a id="sprintbacklog"></a>
 <details>
   <summary><b>Sprint 1</b></summary>
+
+### **Sprint 1: Execução e Planejamento**
+* **Capacidade Estimada da Equipe:** 10 Story Points
+* **Meta da Sprint:** User Story de rank 1 (total de 3 Story Points).
+* **Metas Extras:** User Story de rank 2.
+
+| Id | rank | Prioridade | User Story | Estimativa | Sprint |
+| -- | ---- | ---------- | ---------- | ---------- | ------ |
+| [Geração automática do cronograma de um professor](docs/sprint/Sprint-1/US1.md) | 1   | Alta | Como professor, quero que a tabela do semestre seja montada automaticamente, para não precisar gastar horas organizando manualmente as aulas. | 3   | 1   |
+| [Seleção de semestre e curso](docs/sprint/Sprint-1/US2.md) | 2   | Alta | Como professor, quero separar os planejamentos por curso e por semestre, para não confundir turmas diferentes. | 2   | 1   |
+
+### Definition of Ready (DoR)
+
+Para uma User Sory estar apta ao início de um Sprint, os critérios a seguir devem ser concluídos:
+
+- Itens mandatórios já identificados.
+- Tem uma clara separação de **instruções, descrição e exemplos**.
+- **Critérios de aceitação e regras de negócio** definidos.
+- **Prioridade** já definida.
+- O **esforço** já definido pela equipe.
+
+### Definition of Done (DoD)
+
+Para uma User Story ser considerada **completa**, os seguintes critérios devem ser concluídos:
+
+- O código está escrito, testado e limpo (seguindo os padrões da equipe).
+- A funcionalidade deve estar integrada à branch **develop** do repositório [BD_2S_backend](https://github.com/rubensvnc/BD_2S_backend).
+- Os **critérios de aceitação** de uma **User Story** foram completos.
+- The interface complies with **usability principles**, providing clear and consistent navigation for the end user.
+- A interface leva em consideração a facilidade de uso ao usuário, sempre exigindo o mínimo de interações possível.
+- A funcionalidade foi **testada** e **aprovada** pelo **Product Owner (PO)**.
 
 </details>
 
@@ -106,7 +137,7 @@ Sprint | Previsão | Status|
 
 ## Tecnologias <a id="tecnologias"></a>
 
-<h4 align="center">       <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"></a>       <a href="https://openjfx.io/"><img src="https://img.shields.io/badge/JavaFX-0E4C92?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://github.com/palexdev/MaterialFX"><img src="https://img.shields.io/badge/MaterialFX-4CAF50?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://github.com/palexdev/MaterialFX"><img src="https://img.shields.io/badge/MaterialFX_Atlanta-2196F3?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://www.jetbrains.com/idea/"><img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"></a>       <a href="https://gluonhq.com/products/scene-builder/"><img src="https://img.shields.io/badge/Scene_Builder-FF6F00?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"></a>       <a href="https://github.com/about"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a> </h4>
+<h4 align="center">       <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"></a>       <a href="https://openjfx.io/"><img src="https://img.shields.io/badge/JavaFX-0E4C92?style=for-the-badge&logo=java&logoColor=white"></a>  <a href="https://www.jetbrains.com/idea/"><img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"></a>       <a href="https://gluonhq.com/products/scene-builder/"><img src="https://img.shields.io/badge/Scene_Builder-FF6F00?style=for-the-badge&logo=java&logoColor=white"></a>       <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"></a>       <a href="https://github.com/about"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a> </h4>
 
 * * *
 
@@ -114,7 +145,6 @@ Sprint | Previsão | Status|
 
 * [Manual de Instalação](docs/manual/instalação.md)
 * [Manual do Usuário](docs/manual/usuário.md)
-* [Relatório Sprint 1](docs/sprint/relatorio_sprint1.md)
 
 * * *
 
