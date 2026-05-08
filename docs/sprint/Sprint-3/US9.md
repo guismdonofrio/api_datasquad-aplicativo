@@ -55,4 +55,4 @@ Permite modificar os detalhes pedagógicos e de status de uma aula sem alterar s
 
 ## Dúvidas
 
-Para sanar quaisquer dúvidas, acesso o manual das regras de negócio da aplicação: [Aqui](docs/Manual_regras_negocio.md)
+Para sanar quaisquer dúvidas, acesso o manual das regras de negócio da aplicação: [Aqui](/docs/Manual_regras_negocio.md)
