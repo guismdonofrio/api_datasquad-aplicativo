@@ -32,11 +32,11 @@ Desenvolvemos uma aplicação JavaFX que centraliza a gestão acadêmica para pr
 | 6   | Media | Como professor, quero indicar se um tema precisa ser ensinado antes de outro, para evitar que os alunos vejam um assunto sem entender o anterior. |  5   | 2   |
 | 7   | Media | Como professor, quero indicar quais temas são opcionais, para que eles apareçam apenas se houver tempo no semestre. |   3  | 2   |
 | 8   | Media | Como professor, quero organizar meus temas por matéria, para não misturar conteúdos diferentes. |  5   | 2   |
-| 9   | Media | Como professor, quero poder ajustar manualmente alguma aula depois que a tabela estiver pronta, caso eu queira mudar algo. |  5   | 2   |
-| 10  | Media | Como coordenador, quero acompanhar os planejamentos dos professores do curso, para entender como cada disciplina está organizada. |     | 3   |
-| 11  | Baixa | Como professor, quero que o planejamento sugira uma ordem inteligente para os temas, para facilitar o aprendizado dos alunos. |     | 3   |
-| 12  | Baixa | Como professor, quero poder visualizar as estatísticas do planejamento, como quantia de aulas distribuídas para cada tema, aulas ministradas, aulas ainda não ministradas, e aulas canceladas por conta de algum imprevisto. |     | 3   |
-| 13  | Baixa | Como professor, quero poder guardar planejamentos antigos, para usar como base em semestres futuros. |     | 3   |
+| 9   | Media | Como professor, quero poder ajustar manualmente alguma aula depois que a tabela estiver pronta, caso eu queira mudar algo. |  5   | 3   |
+| 10  | Media | Como coordenador, quero acompanhar os planejamentos dos professores do curso, para entender como cada disciplina está organizada. |  3   | 3   |
+| 11  | Baixa | Como professor, quero que o planejamento sugira uma ordem inteligente para os temas, para facilitar o aprendizado dos alunos. |  8   | 3   |
+| 12  | Baixa | Como professor, quero poder visualizar as estatísticas do planejamento, como quantia de aulas distribuídas para cada tema, aulas ministradas, aulas ainda não ministradas, e aulas canceladas por conta de algum imprevisto. |  3   | 3   |
+| 13  | Baixa | Como professor, quero poder guardar planejamentos antigos, para usar como base em semestres futuros. |  2   | 3   |
 
 * * *
 ## Sprint Backlog 📅 <a id="sprintbacklog"></a>
@@ -120,7 +120,42 @@ Para uma User Story ser considerada **completa**, os seguintes critérios devem 
 <details>
   <summary><b>Sprint 3</b></summary>
 
+### **Sprint 3: Execução e Planejamento**
+* **Capacidade Estimada da Equipe:** 18 Story Points
+* **Meta da Sprint:** User Story de ranks 9, 10 e 11 (total de 16 Story Points).
+* **Metas Extras:** User Story de ranks 12 e 13.
+
+| Id | rank | Prioridade | User Story | Estimativa | Sprint |
+| -- | ---- | ---------- | ---------- | ---------- | ------ |
+| [Ajuste Manual do Cronograma de Aulas](docs/sprint/Sprint-3/US9.md) | 9    | Media      | Como professor, quero poder ajustar manualmente alguma aula depois que a tabela estiver pronta, caso eu queira mudar algo. | 5          | 3      |
+| [Visualização de Planejamentos por Coordenação](docs/sprint/Sprint-3/US10.md) | 10    | Media      | Como coordenador, quero acompanhar os planejamentos dos professores do curso, para entender como cada disciplina está organizada        | 3          | 3      |
+| [Geração Inteligente de Cronograma Acadêmico](docs/sprint/Sprint-3/US11.md)                      | 11    | Baixa      | Como professor, quero que o planejamento sugira uma ordem inteligente para os temas, para facilitar o aprendizado dos alunos.                                    | 8          | 3      |
+| [Visualização de Estatísticas do Planejamento](docs/sprint/Sprint-3/US12.md)                            | 12    | Baixa      | Como professor, quero poder visualizar as estatísticas do planejamento, como quantia de aulas distribuídas para cada tema, aulas ministradas, aulas ainda não ministradas, e aulas canceladas por conta de algum imprevisto.     | 3          | 3      |
+| [Seleção e Persistência de Contexto Acadêmico do Planejamento](docs/sprint/Sprint-3/US13.md)                            | 13    | Baixa      | Como professor, quero poder guardar planejamentos antigos, para usar como base em semestres futuros.                                   | 2          | 3      |
+
+### Definition of Ready (DoR)
+
+Para uma User Sory estar apta ao início de um Sprint, os critérios a seguir devem ser concluídos:
+
+- Itens mandatórios já identificados.
+- Tem uma clara separação de **instruções, descrição e exemplos**.
+- **Critérios de aceitação e regras de negócio** definidos.
+- **Prioridade** já definida.
+- O **esforço** já definido pela equipe.
+
+### Definition of Done (DoD)
+
+Para uma User Story ser considerada **completa**, os seguintes critérios devem ser concluídos:
+
+- O código está escrito, testado e limpo (seguindo os padrões da equipe).
+- A funcionalidade deve estar integrada ao branch: **dev**.
+- Os **critérios de aceitação** de uma **User Story** foram completos.
+- The interface complies with **usability principles**, providing clear and consistent navigation for the end user.
+- A interface leva em consideração a facilidade de uso ao usuário, sempre exigindo o mínimo de interações possível.
+- A funcionalidade foi **testada** e **aprovada** pelo **Product Owner (PO)**.
+
 </details>
+
 <br>
 
 * * *
@@ -130,8 +165,8 @@ Para uma User Story ser considerada **completa**, os seguintes critérios devem 
 Sprint | Previsão | Status|
 |------|--------|------|
 |Sprint 01 | 16/03/2026 | concluído |
-|Sprint 02| 13/04/2026| Em andamento |
-|Sprint 03| 11/05/2026 | a fazer
+|Sprint 02| 13/04/2026| concluído |
+|Sprint 03| 11/05/2026 | em andamento |
 
 * * *
 
