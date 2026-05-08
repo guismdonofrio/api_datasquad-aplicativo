@@ -1,138 +1,158 @@
-Este guia foi reestruturado para servir como um **Manual de Referência Técnica de UI/UX** para o time de desenvolvimento. O objetivo é padronizar a interpretação das User Stories e garantir que a fidelidade visual e funcional seja mantida durante a Sprint 3.
+Este documento serve **APENAS** como guia técnico e funcional para orientar o desenvolvimento das *User Stories* da **Sprint 3**, utilizando os protótipos de interface (GUIs) como referência visual para o comportamento esperado do sistema.
 
-* * *
+---
 
-📘 Guia de Referência de UI/UX – Sprint 3 (SwiftPlan)
-=====================================================
+# Guia de Referência de Interface e UX – Sprint 3
 
-> **Nota Técnica:** As interfaces apresentadas são protótipos funcionais. O design final deve seguir os padrões de acessibilidade, entretanto a paleta de cores definida é alterável, mas a lógica de componentes descrita abaixo é **mandatória** para o critério de aceitação das tarefas.
+**Objetivo:** Padronizar a implementação das funcionalidades de coordenação, administração e planejamento, minimizando ambiguidades técnicas.
 
-* * *
+---
 
-1. Gestão de Atribuições (Visão Coordenador)
+## 1. Visão Geral e Navegação (Dashboard Principal)
 
---------------------------------------------
+A interface segue um padrão de painel administrativo com foco em usabilidade e feedback de estado.
 
-**Objetivo:** Alocação de carga horária para docentes com validação de conflitos.
+<table>
+  <tr>
+    <td valign="top"><img src="img/main.png" width="70%">
+  </tr>
+</table>
 
-_(Referência: Exemplar de atribuicao.png / Exemplar de atribuicao com erro.png)
+* **Controles Superiores:** Filtros globais para Ano, Semestre, Curso e Semestre do Curso.
+* **Feedback de Estado:** Caso o usuário acesse dados de períodos encerrados, deve ser exibido um banner de alerta (ex: cor laranja) indicando o **"Modo Somente Leitura"**.
+* **Barra Lateral:** Navegação persistente por ícones e textos para acesso rápido às funcionalidades (Calendário, Cursos, Atribuições, etc.).
+* **Identificação:** Canto superior direito reservado para perfil do usuário logado e botão de saída (*Logout*).
 
-[![Ver imagem ampliada](docs/sprint/Sprint-3/img/coord_atribui.png)](docs/sprint/Sprint-3/img/coord_atribui.png)
+---
 
-* **Interatividade:** O uso de _Checkboxes_ permite a seleção múltipla de horários/dias.
+## 2. Painel do Coordenador
 
-* **Tratamento de Conflitos:** Células com **borda vermelha** indicam indisponibilidade (horário já ocupado em outra atribuição).
+### 2.1 Gestão de Disciplinas (CRUD)
 
-* **Feedback de Erro:** Caso o usuário tente salvar um conflito, o sistema deve exibir a mensagem de alerta em destaque: _"Atenção: Há horários com conflito selecionados!"_.
+<table>
+  <tr>
+    <td valign="top"><img src="img/coord_disci.png" width="100%">
+    <td valign="top"><img src="img/coord_disci_delete.png" width="100%">
+  </tr>
+</table>
 
-* * *
+* **Layout Dinâmico:** A tabela de disciplinas ocupa a largura total por padrão. Ao clicar em **"+ Nova"**, o formulário lateral de cadastro deve ser exibido, redimensionando a tabela.
+* **Ações de Linha:** Cada disciplina possui ícones para Editar e Excluir.
+* **Confirmação de Exclusão:** Toda tentativa de remoção deve disparar um *pop-up* (modal) de confirmação com os botões "OK" e "Cancelar" para evitar deleções acidentais.
 
-2. Planejamento e Estatísticas (Visão Professor)
+### 2.2 Atribuição de Carga Horária e Conflitos
 
-------------------------------------------------
+<table>
+  <tr>
+    <td valign="top"><img src="img/coord_atribui.png" width="100%">
+    <td valign="top"><img src="img/coord_atribui_erro.png" width="100%">
+  </tr>
+</table>
 
-**Objetivo:** Acompanhamento de cronograma e métricas de desempenho da disciplina.
+* **Grade de Atribuição:** Interface baseada em *checkboxes* dividida por horários e dias da semana (Segunda a Sábado).
+* **Tratamento de Conflitos:**
+* Horários já atribuídos por outros coordenadores devem aparecer com **borda vermelha** e bloqueados para seleção.
+* Caso haja seleção inválida, o sistema deve exibir uma mensagem de erro no rodapé: *"Atenção: Há horários com conflito selecionados!"*.
 
-_(Referência: Exemplar tela planejamento professor.png)_
 
-* **Navegação Hierárquica:** À esquerda, o cronograma utiliza um componente de _Tree View_ (árvore) por datas.
+* **Persistência:** Botão de "Salvar Atribuição" destacado no rodapé.
 
-* **Dashboard de Métricas:** À direita, o sistema deve renderizar estatísticas em tempo real, incluindo gráficos de rosca para status de aulas (Ministradas, Pendentes, Canceladas) e barras de progresso para a Carga Horária (CH).
+### 2.3 Visualização de Planejamento (Monitoria)
 
-* * *
+<table>
+  <tr>
+    <td valign="top"><img src="img/coord_planej.png" width="70%">
+  </tr>
+</table>
 
-3. Monitoramento de Planejamento (Visão Coordenador)
+* **Hierarquia de Seleção:** O coordenador deve visualizar a lista de professores.
+* **Ajuste de UI Importante:** Diferente do protótipo inicial, a árvore lateral deve exibir **apenas o nome dos professores**, removendo os nomes das disciplinas debaixo do professor para simplificar a navegação.
+* **Sinalização por Cores (Status das Aulas):**
+* **AMARELO:** Aulas Pendentes.
+* **VERDE:** Aulas Lecionadas.
+* **VERMELHO:** Aulas Canceladas.
 
-----------------------------------------------------
 
-**Objetivo:** Supervisão das atividades dos professores subordinados.
 
-_(Referência: Exemplar visualizacao planejamento por coord.png)_
+---
 
-* **Filtro de Hierarquia:** O painel esquerdo exibe apenas os professores sob gestão do coordenador logado.
+## 3. Painel do Professor
 
-* **Padronização Visual:** A visualização à direita deve ser um "espelho" da visão do professor, garantindo que o coordenador veja exatamente os mesmos dados.
+### 3.1 Planejamento e Estatísticas de Aula
 
-* **Destaque de Status (Cores de Texto):**
-  
-  * **Amarelo:** Aulas Pendentes.
-  
-  * **Vermelho:** Aulas Canceladas.
-  
-  * **Verde:** Aulas Lecionadas.
+<table>
+  <tr>
+    <td valign="top"><img src="img/prof_planej.png" width="70%">
+  </tr>
+</table>
 
-* * *
+* **Cronograma (Esquerda):** Lista expansível por data e dia da semana. Ao expandir, exibe-se o horário, o tema da aula e o status (ex: [MINISTRADA], [NAO_MINISTRADA]).
+* **Painel de Métricas (Direita):**
+* Barra de progresso de conclusão da Carga Horária (CH).
+* Dados quantitativos (Total de temas, avaliações restantes, faltas, etc.).
+* **Gráfico de Status:** Gráfico de pizza (Donut ou Pie) para visualização rápida da distribuição de aulas ministradas, pendentes e canceladas.
 
-4. Gestão de Disciplinas e Cursos
 
----------------------------------
 
-**Objetivo:** CRUD (Criação, Leitura, Atualização e Exclusão) de entidades acadêmicas.
+---
 
-_(Referência: Exemplar visualizacao disciplinas por coord.png / Exemplar base adm_curso_horarios adicao.png)_
+## 4. Painel Administrativo (Configurações Globais)
 
-* **Layout Adaptável:** A tabela de listagem ocupa a tela inteira por padrão. O formulário de cadastro (à direita) é **condicional** e só aparece ao clicar em "+ Nova".
+### 4.1 Calendário Acadêmico e Bloqueios
 
-* **Ações In-line:** Cada linha deve conter botões de edição e exclusão.
+<table>
+  <tr>
+    <td valign="top"><img src="img/adm_block.png" width="70%">
+  </tr>
+</table>
 
-* **Segurança de Dados:** A exclusão exige obrigatoriamente um modal de confirmação (Pop-up) para evitar perda acidental de dados. _(Ref: Exemplar visualizacao disciplinas_exclusao por coord.png)_
 
-* * *
+* **Seleção de Data:** Interface de calendário onde o administrador seleciona os dias.
+* **Lógica de Cancelamento:**
+1. Seleciona o mês no filtro superior.
+2. Clica na data desejada (os botões mudam de estado visual).
+3. Define o Turno. **Importante:** Se o turno não for selecionado, o bloqueio é assumido para o dia inteiro. Se o turno for selecionado, os horários específicos aparecem para marcação obrigatória.
 
-5. Calendário Acadêmico e Bloqueios (Visão Administrador)
 
----------------------------------------------------------
+* **Código de Cores do Calendário:**
+* **Vermelho:** Dia já cancelado/bloqueado.
+* **Amarelo:** Seleção atual em processo (não confirmada).
+* **Borda Avermelhada:** Indicação para reverter/excluir um bloqueio existente.
 
-**Objetivo:** Gestão de feriados, recessos e bloqueios de turnos.
 
-_(Referência: Exemplar bloqueio por adm.png / Exemplar de cadastro de Sprints adm.png)_
+* **Log de Registro:** Lista inferior detalhando todos os cancelamentos efetuados, incluindo o motivo e quem realizou a ação.
 
-* **Lógica de Seleção de Datas:**
-  
-  1. O usuário seleciona o mês;
-  
-  2. O grid de dias é gerado dinamicamente;
-  
-  3. Selecionar um dia abre o painel "Configurar Cancelamento".
+### 4.2 Cadastro de Sprints e Semestre
 
-* **Hierarquia de Bloqueio:** Se um turno não for especificado, o bloqueio é aplicado ao **dia inteiro**. Se o turno for escolhido, a seleção de horários torna-se **obrigatória**.
+<table>
+  <tr>
+    <td valign="top"><img src="img/adm_cad_sprint.png" width="70%">
+  </tr>
+</table>
 
-* **Legenda de Estados do Calendário:**
-  
-  * **Vermelho:** Data cancelada/bloqueada.
-  
-  * **Amarelo:** Seleção atual (ainda não salva).
-  
-  * **Borda Avermelhada:** Ação de reverter um cancelamento existente.
+* **Datas do Semestre:** Campos de data para início/fim do semestre e eventos fixos (TCC, Feira de Soluções).
+* **Gestão de Sprints:** Tabela fixa com 3 linhas (Sprint 1, 2 e 3). A edição ocorre por clique duplo na célula para inserção da data de início, fim e data da *Review*.
 
-* * *
+### 4.3 Gestão de Cursos e Templates de Horários
 
-6. Layout Estrutural (Shell da Aplicação)
+<table>
+  <tr>
+    <td valign="top"><img src="img/adm_add_hora.png" width="70%">
+  </tr>
+</table>
 
------------------------------------------
+* **Tabela de Cursos:** Listagem com filtros e ações de edição/exclusão.
+* **Configuração de Horários:**
+* Permite adicionar linhas para definir o tipo (Aula/Intervalo), número da aula, início e fim.
+* **Funcionalidade de Automação:** Botão "Aplicar Template do Turno" (recupera configurações padrão) e "Propagar ao Turno" (replica o cronograma atual para outros cursos do mesmo período).
+* **Interatividade:** Botão de lixeira para exclusão rápida de linhas de horário.
 
-**Objetivo:** Navegação global e contexto de sistema.
 
-_(Referência: Exemplar conexao shell com adm.png)_
 
-* **Header (Topo):** Controles globais de filtragem (Ano/Semestre/Curso) e identificação do usuário com botão de _Logout_.
+---
 
-* **Sidebar (Esquerda):** Menu de navegação por funcionalidades.
+### Notas Finais para o Desenvolvimento:
 
-* **Banner de Contexto:** Sempre que o usuário visualizar dados históricos (passados), um aviso em destaque deve indicar o **Modo Somente Leitura**.
-
-* * *
-
-7. Configuração de Sprints e Horários
-
--------------------------------------
-
-**Objetivo:** Definição de prazos e templates de horários.
-
-* **Edição Direta (In-place):** Para as Sprints, as células da tabela devem permitir edição com duplo clique (limitado a 3 linhas fixas).
-
-* **Automação de Horários:** Implementar funções de "Aplicar Template" e "Propagar ao Turno" para otimizar o cadastro em massa de horários de aulas.
-
-* * *
-
-**Equipe de Desenvolvimento:** Em caso de divergência entre a User Story escrita e estas imagens, este guia de UI deve prevalecer como a intenção de design do cliente.
+* Priorizar a implementação do feedback visual (cores de status e alertas de erro).
+* Garantir que todas as exclusões de dados sensíveis (cursos, disciplinas, horários) possuam o modal de confirmação.
+* Seguir rigorosamente a lógica de cores estabelecida para o calendário e para o planejamento dos professores.
