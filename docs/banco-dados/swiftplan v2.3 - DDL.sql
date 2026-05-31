@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS swiftplan;
-USE swiftplan;
-
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
     nome VARCHAR(120) NOT NULL,
@@ -111,7 +108,7 @@ CREATE TABLE cancelamento_adm (
     dia_inteiro TINYINT(1) NOT NULL DEFAULT 0,
 	motivo VARCHAR(255) NOT NULL,
 	criado_em DATETIME NOT NULL,
-    deletado_em DATETIME NOT NULL,
+    deletado_em DATETIME NULL,
     
     PRIMARY KEY (id_cancelamento_adm),
 	CONSTRAINT fk_ca_adm FOREIGN KEY (adm_id) REFERENCES usuario_tipo (usuario_id),
@@ -151,7 +148,7 @@ CREATE TABLE atribuicao_professor (
     PRIMARY KEY (id_atribuicao_professor),
 	UNIQUE KEY uq_atribuicao (disciplina_id, semestre_letivo_id), -- 1 disci por professor
 	CONSTRAINT fk_ap_disciplina FOREIGN KEY (disciplina_id) REFERENCES disciplina (id_disciplina),
-	CONSTRAINT fk_ap_professor FOREIGN KEY (professor_id) REFERENCES usuario_tipo (usuario_id),
+	CONSTRAINT fk_ap_professor FOREIGN KEY (professor_id) REFERENCES usuario (id_usuario),
 	CONSTRAINT fk_ap_sl FOREIGN KEY (semestre_letivo_id) REFERENCES semestre_letivo (id_semestre_letivo)
 );
 
@@ -223,3 +220,5 @@ CREATE TABLE slot_planejamento (
 	CONSTRAINT fk_sp_tema FOREIGN KEY (tema_id) REFERENCES tema (id_tema),
 	CONSTRAINT fk_sp_cancelamento_adm FOREIGN KEY (cancelamento_adm_id) REFERENCES cancelamento_adm (id_cancelamento_adm)
 );
+
+
