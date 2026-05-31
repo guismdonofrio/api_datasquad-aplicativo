@@ -168,6 +168,8 @@ Para uma User Story ser considerada **completa**, os seguintes critérios devem 
 - A interface leva em consideração a facilidade de uso ao usuário, sempre exigindo o mínimo de interações possível.
 - A funcionalidade foi **testada** e **aprovada** pelo **Product Owner (PO)**.
 
+#### Video das funcionalidades descritas: [Videos](/docs/sprint/video_funcionalidade).
+
 </details>
 
 <br>
