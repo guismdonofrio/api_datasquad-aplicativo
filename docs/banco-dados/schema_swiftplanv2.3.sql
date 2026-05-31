@@ -1,3 +1,6 @@
+CREATE DATABASE swiftplan;
+USE swiftplan;
+
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
     nome VARCHAR(120) NOT NULL,
