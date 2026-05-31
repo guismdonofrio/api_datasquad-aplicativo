@@ -192,8 +192,8 @@ Sprint | Previsão | Status|
 
 ## Link para as documentações <a id="link"></a>
 
-* [Manual de Instalação](docs/manual/instalação.md)
-* [Manual do Usuário](docs/manual/usuário.md)
+* [Manual de Instalação](docs/manual/instalacao.md)
+* [Manual do Usuário](docs/manual/usuario.md)
 
 * * *
 
