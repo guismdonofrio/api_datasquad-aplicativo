@@ -180,7 +180,7 @@ Sprint | Previsão | Status|
 |------|--------|------|
 |Sprint 01 | 16/03/2026 | concluído |
 |Sprint 02| 13/04/2026| concluído |
-|Sprint 03| 11/05/2026 | em andamento |
+|Sprint 03| 11/05/2026 | concluído |
 
 * * *
 
