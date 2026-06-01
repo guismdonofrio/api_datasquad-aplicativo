@@ -17,13 +17,13 @@
 
 ## 1. Instalar o Java
 
-O sistema requer o **Java 21 ou superior**.
+O sistema requer o **Java 25 ou superior**.
 
 ### 1.1 Baixar o instalador
 
-Acesse: https://www.oracle.com/java/technologies/downloads/#java21
+Acesse: [https://www.oracle.com/java/technologies/downloads/#java25](https://www.oracle.com/java/technologies/javase/jdk25-archive-downloads.html)
 
-Clique em **Windows** → baixe o arquivo `.exe` (ex: `jdk-21_windows-x64_bin.exe`).
+Vá para seção **Java SE Development Kit 25.0.2** → selecione Windows x64 Installer e clique no link
 
 ### 1.2 Instalar
 
@@ -37,13 +37,13 @@ Clique em **Windows** → baixe o arquivo `.exe` (ex: `jdk-21_windows-x64_bin.ex
 2. No terminal que abrir, digite:
 
 ```
-java -version
+java --version
 ```
 
 O resultado esperado é algo como:
 
 ```
-java version "21.0.3" 2024-04-16 LTS
+java version "25.0.2"
 ```
 
 Se aparecer esse resultado, o Java está instalado corretamente. Caso contrário, reinicie o computador e tente novamente.
@@ -111,7 +111,7 @@ mysql -u root -p
 
 1. No menu superior, clique em **File** → **New Query Tab**
 
-2. Cole todo o texto disponibilizado em [Banco de dados](docs/banco-dados/schema_swiftplanv2.3.sql):
+2. Cole todo o texto disponibilizado em [Banco de dados](/docs/banco-dados/schema_swiftplanv2.3.sql):
 
 3. Clique no botão **⚡ (Execute)** ou pressione `Ctrl + Enter`
 
